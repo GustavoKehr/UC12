@@ -1,0 +1,12 @@
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\bin\Debug\net6.0\Projeto_Teste.deps.json
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\bin\Debug\net6.0\Projeto_Teste.dll
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\bin\Debug\net6.0\Projeto_Teste.pdb
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.csproj.AssemblyReference.cache
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.AssemblyInfoInputs.cache
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.AssemblyInfo.cs
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.csproj.CoreCompileInputs.cache
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.dll
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\refint\Projeto_Teste.dll
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\Projeto_Teste.pdb
+C:\Users\gucke\source\repos\Projeto_Teste\Projeto_Teste\obj\Debug\net6.0\ref\Projeto_Teste.dll
