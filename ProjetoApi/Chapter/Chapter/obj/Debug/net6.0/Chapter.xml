@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chapter</name>
+    </assembly>
+    <members>
+        <member name="T:Chapter.Contexts.ChapterContext">
+            <summary>
+            Classe responsável pelo contexto do projeto
+            Faz a comunicação entre a API e o banco de dados
+            </summary>
+        </member>
+        <member name="M:Chapter.Contexts.ChapterContext.#ctor">
+            <summary>
+            Método construtor vazio
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Chapter.Contexts.ChapterContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Chapter.Contexts.ChapterContext})" -->
+        <member name="M:Chapter.Contexts.ChapterContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Define as opções de construção do banco de dados
+            </summary>
+            <param name="optionsBuilder">Objeto com as configurações definidas</param>
+        </member>
+        <member name="P:Chapter.Contexts.ChapterContext.Livros">
+            <summary>
+            DbSet representa as entidades que serão utilizadas nas operações de leitura, criação, atualização e deleção (CRUD)
+            Nesse sistema, a classe livro faz referência a tabela Livros do banco de dados
+            </summary>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.Listar">
+            <summary>
+            método que controla acesso para listagem de livros
+            </summary>
+            <returns>status code ok e a lista de livros</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.BuscarPorId(System.Int32)">
+            <summary>
+            método que controla o acesso para busca de um livro por Id
+            </summary>
+            <param name="id">id do livro a ser buscado</param>
+            <returns>status code Ok e livro buscado</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.Cadastrar(Chapter.Models.Livro)">
+            <summary>
+            método que controla o acesso para cadastro de livros
+            </summary>
+            <param name="livro">objeto a ser cadastrado</param>
+            <returns>status code Ok</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.Atualizar(System.Int32,Chapter.Models.Livro)">
+            <summary>
+            método que controla o acesso para edição de um livro
+            </summary>
+            <param name="id">id do livro a ser atualizado</param>
+            <param name="livro">objeto livro com os novos dados</param>
+            <returns>status code 204</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.Deletar(System.Int32)">
+            <summary>
+            método que controla o acesso para exclusão de um livro
+            </summary>
+            <param name="id">id do livro a ser excluído</param>
+            <returns>status code 204</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LivroController.GetByTitulo(System.String)">
+            <summary>
+            método que controla o acesso para buscar um livro pelo título
+            </summary>
+            <param name="titulo">título do livro a ser buscado</param>
+            <returns></returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.LoginController.Login(Chapter.ViewModels.LoginViewModel)">
+            <summary>
+            método que controla o acesso para login
+            </summary>
+            <param name="login">objeto com os dados dos usuario : email e senha</param>
+            <returns>token de acesso</returns>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.Listar">
+            <summary>
+            método que controla o acesso a listagem de usuários
+            </summary>
+            <returns>lista dos usuários cadastrados</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.BuscarPorId(System.Int32)">
+            <summary>
+            método que controla o acesso a buscar um usuário por id
+            </summary>
+            <param name="id">id do usuário a ser buscado</param>
+            <returns>status code Ok e usuário buscado</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.Cadastrar(Chapter.Models.Usuario)">
+            <summary>
+            método que controla o acesso para cadastro de um usuário
+            </summary>
+            <param name="usuario">objeto a ser cadastrado</param>
+            <returns>status code created</returns>
+            <exception cref="T:System.Exception">mensage de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.Atualizar(System.Int32,Chapter.Models.Usuario)">
+            <summary>
+            método que controla o acesso a atualização de um usuário
+            </summary>
+            <param name="id">id do usuário a ser atualizado</param>
+            <param name="usuario">objeto usuário com os novos dados</param>
+            <returns>mensagem de sucesso</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.Deletar(System.Int32)">
+            <summary>
+            método que controla o acesso para excluir um usuário
+            </summary>
+            <param name="id">id do usuário a ser excluído</param>
+            <returns>status code ok e mensagem de sucesso</returns>
+            <exception cref="T:System.Exception">mensagem de erro</exception>
+        </member>
+        <member name="T:Chapter.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface IUsuarioRepository
+            </summary>
+        </member>
+        <member name="T:Chapter.Models.Livro">
+            <summary>
+            classe Livro
+            </summary>
+        </member>
+        <member name="T:Chapter.Models.Usuario">
+            <summary>
+            Classe Usuário
+            </summary>
+        </member>
+        <member name="T:Chapter.Repositories.LivroRepository">
+            <summary>
+            repositório para classe Livro, deverá se comunicar com o contexto
+            vai pegar a solicitação do controller e vai acessar as informações no banco via context 
+            </summary>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.Atualizar(System.Int32,Chapter.Models.Livro)">
+            <summary>
+            método para atualizar um livro
+            </summary>
+            <param name="id">id do livro a ser atualizado</param>
+            <param name="livro">objeto usuário com os novos dados</param>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.BuscarPorId(System.Int32)">
+            <summary>
+            método para buscar um livro pelo id
+            </summary>
+            <param name="id">id do livro a ser buscado</param>
+            <returns>livro buscado</returns>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.BuscarPorTitulo(System.String)">
+            <summary>
+            método para buscar um livro pelo título
+            </summary>
+            <param name="titulo">título do livro a ser buscado</param>
+            <returns>livro buscado</returns>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.Cadastrar(Chapter.Models.Livro)">
+            <summary>
+            método para cadastrar um livro
+            </summary>
+            <param name="livro">objeto a ser cadastrado</param>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.Deletar(System.Int32)">
+            <summary>
+            método para excluir um livro
+            </summary>
+            <param name="id">id do livro a ser excluido</param>
+        </member>
+        <member name="M:Chapter.Repositories.LivroRepository.Ler">
+            <summary>
+            método para listagem de livros
+            </summary>
+            <returns>lista com os livros cadastrados</returns>
+        </member>
+        <member name="T:Chapter.Repositories.UsuarioRepository">
+            <summary>
+            /// repositório para classe Livro, deverá se comunicar com o contexto
+            vai pegar a solicitação do controller e vai acessar as informações no banco via context
+            herda da interface
+            </summary>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.Atualizar(System.Int32,Chapter.Models.Usuario)">
+            <summary>
+            método para atualizar um usuário
+            </summary>
+            <param name="id">id do usuário a ser atualizado</param>
+            <param name="usuario">objeto usuário com os novos dados</param>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            método para buscar um usuário por id
+            </summary>
+            <param name="id">id do usário a ser </param>
+            <returns></returns>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.Cadastrar(Chapter.Models.Usuario)">
+            <summary>
+            método para cadastrar um usuário
+            </summary>
+            <param name="usuario">objeto a ser cadastrado</param>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            método para excluir um usuário
+            </summary>
+            <param name="id">id do usuário a ser excluido</param>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.Listar">
+            <summary>
+            método para listar usuários cadastrados
+            </summary>
+            <returns>lista de usuários</returns>
+        </member>
+        <member name="M:Chapter.Repositories.UsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            método para realizar login
+            </summary>
+            <param name="email">email a ser verificado</param>
+            <param name="senha">senha a ser verificada</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
